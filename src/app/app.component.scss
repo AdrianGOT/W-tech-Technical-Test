@@ -1,0 +1,23 @@
+:host{
+  // display: flex;
+}
+
+.main-container{
+  height: 94vh;
+  display: flex;
+}
+
+.sidenav{
+  flex: 1;
+}
+
+.sidenav__menu{
+  width: 20%;
+  min-width: 200px;
+}
+
+.sidenav__content{
+  padding: 20px;
+}
+
+

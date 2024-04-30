@@ -1,0 +1,31 @@
+<picture>
+  <img src="" alt="">
+</picture>
+
+<div>
+  <mat-accordion class="example-headers-align" hideToggle>
+    <mat-expansion-panel *ngFor="let item of sideNavItemList" class="expansion-panel">
+
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <span> {{item.title}} </span>
+        </mat-panel-title>
+
+      </mat-expansion-panel-header>
+      <div class="divider"></div>
+
+      <mat-list role="list">
+        <mat-list-item
+          *ngFor="let subItem of item.childrens"
+          (click)="onSelectItem(subItem)"
+          [class]="'item ' + subItem.activeClass"
+          [routerLink]="subItem.path">
+            {{subItem.title}}
+        </mat-list-item>
+      </mat-list>
+
+
+    </mat-expansion-panel>
+  </mat-accordion>
+
+</div>

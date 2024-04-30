@@ -1,0 +1,14 @@
+.page{
+  &__title{
+    width: 100%;
+    border-bottom: 2px solid #005883;
+  }
+
+  &__title h3{
+    margin: 5px
+  }
+
+  &__content{
+    padding: 10px 5px;
+  }
+}

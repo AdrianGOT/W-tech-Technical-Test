@@ -1,0 +1,69 @@
+<section class="question">
+  <header class="question__header">
+    <div>
+      <span>
+        <mat-icon> help_outline </mat-icon>
+      </span>
+      <h4>Ejercicio 2</h4>
+    </div>
+    <div class="expand-circule">
+      <button mat-icon-button (click)="toggleQuestion()">
+        <mat-icon> {{ expandIcon }} </mat-icon>
+      </button>
+    </div>
+  </header>
+
+  <div [ngClass]="questionContentClass" >
+
+    <p>Seleccionar las respuestas correctas</p>
+
+    <form [formGroup]="form">
+      <ul>
+        <div *ngFor="let question of controlsName;let i = index">
+          <li>{{ questions[question].text }}</li>
+
+          <mat-radio-group
+            [formControlName]="controlsName[i]"
+            aria-label="Select an option"
+            class="answer-list">
+
+            <ol type="a">
+
+              <li *ngFor="let answer of questions[question].answerList; let i = index">
+                <mat-radio-button [value]="i"> <p>{{answer}} </p> </mat-radio-button>
+              </li>
+
+            </ol>
+
+          </mat-radio-group>
+
+
+          <app-notification
+            *ngIf="isCheckQuestion"
+            [information]="notificationInfo[question]">
+          </app-notification>
+
+        </div>
+      </ul>
+
+
+      <footer class="footer">
+        <button
+          class="footer__button"
+          mat-raised-button
+          (click)="onCheck()"
+          [disabled]="form.invalid"
+          *ngIf="!isCheckQuestion "> Comprobar </button>
+
+        <div *ngIf="isCheckQuestion" class="footer__score">
+          <p> Su puntaje:  {{ totalScore }} / {{controlsName.length}} </p>
+        </div>
+
+      </footer>
+    </form>
+
+  </div>
+
+
+
+</section>

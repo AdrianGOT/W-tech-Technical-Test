@@ -1,0 +1,45 @@
+:host{
+  height: 100%;
+  width: 300px;
+}
+
+a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 48px;
+}
+
+span{
+  font-size: 1.2rem;
+}
+
+li{
+  border-bottom: 1px solid rgba(173, 173, 173, 0.541);
+  width: 100%;
+}
+
+ul{
+  width: 100%;
+  padding: 0px
+}
+.item{
+  transition: background 0.2s;
+}
+
+.item:hover{
+  background-color: rgba(201, 199, 199, 0.603);
+  cursor: pointer;
+
+}
+
+.divider{
+  width: 100%;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.5);
+}
+
+.actived{
+  background-color: #f0b429;
+}
+
+

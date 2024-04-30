@@ -1,0 +1,15 @@
+<div class="notification-container">
+  <header class="notification-container__title">
+    <div [class]="checkClass">
+      <mat-icon> {{checkIcon}} </mat-icon>
+    </div>
+    <div>
+      {{checkText}}
+    </div>
+  </header>
+
+  <div class="notification-container__content">
+    <p> <strong> Retroalimentación: </strong> {{information?.correctAnswer}}</p>
+  </div>
+
+</div>

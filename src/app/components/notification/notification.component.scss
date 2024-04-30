@@ -1,0 +1,35 @@
+.notification-container{
+  border: 2px dashed #f47920;
+  padding: 10px 5px;
+
+
+  &__title{
+    display: flex;
+    align-items: center;
+  }
+
+  &__title div:first-child{
+    border-radius: 50%;
+    color: white;
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 5px 10px;
+  }
+
+  &__content strong{
+    color: #005883;
+   }
+}
+
+.correct{
+  background-color: green;
+}
+
+.fail{
+  background-color: red;
+}
